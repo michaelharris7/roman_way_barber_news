@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 describe 'navigate' do
-  describe 'news post json' do
+  describe 'news article json' do
     it 'can be reached successfully' do
-      visit posts_url
+      visit articles_url
       expect(page.status_code).to eq(200)
     end
   end
