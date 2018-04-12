@@ -1,14 +1,16 @@
 class ArticlesController < ApplicationController
-  before_action :set_article, only: [:show, :update]
+  before_action :set_article, only: [:show, :update, :destroy]
 
-  # GET /articles
   def index
     @articles = Article.all
 
     render json: @articles
   end
 
-  # POST /articles
+  def show
+    render json: @article
+  end
+
   def create
     @article = Article.new(article_params)
 
@@ -19,7 +21,6 @@ class ArticlesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /articles/1
   def update
     if @article.update(article_params)
       render json: @article
@@ -28,9 +29,8 @@ class ArticlesController < ApplicationController
     end
   end
 
-  # GET /proposals/1
-  def show
-    render json: @article
+  def destroy
+    @article.destroy
   end
 
   private

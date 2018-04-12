@@ -22,4 +22,33 @@ describe 'navigate' do
     end
   end
 
+  describe 'delete' do
+    it 'can be deleted' do
+      article_to_delete = create(:article)
+
+      visit articles_path(article_to_delete)
+
+      expect{article_to_delete.destroy}.to change(Article, :count).by(-1)
+    end
+  end
+
 end
+
+
+
+
+
+
+# describe 'DELETE #destroy' do
+
+#   context "success" do
+
+#     it "deletes the user" do
+#       expect{
+#         delete :destroy, :id => @user, :user => {:password => @user.password}
+#      }.to change(User, :count).by(-1)
+#     end
+
+#   end
+
+# end
