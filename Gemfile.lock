@@ -182,7 +182,6 @@ DEPENDENCIES
   byebug (~> 10.0, >= 10.0.2)
   capybara (~> 3.0, >= 3.0.1)
   database_cleaner (~> 1.6, >= 1.6.2)
-  devise (~> 4.4, >= 4.4.3)
   devise_token_auth (~> 0.1.43)
   factory_bot_rails (~> 4.8, >= 4.8.2)
   listen (>= 3.0.5, < 3.2)

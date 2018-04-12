@@ -25,6 +25,5 @@ group :development do
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem 'devise', '~> 4.4', '>= 4.4.3'
 gem 'devise_token_auth', '~> 0.1.43'
 gem 'omniauth', '~> 1.8', '>= 1.8.1'
