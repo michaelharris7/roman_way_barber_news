@@ -1,5 +1,5 @@
-# User.create(email: 'admin@example.com', first_name: 'Mike', last_name: 'Harris', type: 'Admin', password: "123456")
-# puts "1 admin user created!"
+AdminUser.create(email: 'admin@example.com', first_name: 'Mike', last_name: 'Harris', password: "123456")
+puts "1 admin user created!"
 
 User.create(email: 'user@example.com', first_name: 'Michael', last_name: 'Harris', password: "123456")
 puts "1 standard user created!"
