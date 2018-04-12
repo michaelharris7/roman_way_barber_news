@@ -1,3 +1,10 @@
+# User.create(email: 'admin@example.com', first_name: 'Mike', last_name: 'Harris', type: 'Admin', password: "123456")
+# puts "1 admin user created!"
+
+User.create(email: 'user@example.com', first_name: 'Michael', last_name: 'Harris', password: "123456")
+puts "1 standard user created!"
+
+
 10.times do |article|
   Article.create!(
     title: "Title #{article}",
@@ -5,7 +12,4 @@
     ref_source_url: 'http://www.harriscoding.com',
   )
 end
-
 puts "10 news articles created!"
-
-# rails g resource Article title:string content:string ref_source_url:string
