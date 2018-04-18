@@ -1,7 +1,7 @@
-AdminUser.create(email: 'admin@example.com', name: 'Mike Harris', password: "12345678")
+AdminUser.create(email: 'admin@example.com', name: 'Mike Harris', password: "1234567a")
 puts "1 admin user created!"
 
-User.create(email: 'user@example.com', name: 'Michael Harris', password: "12345678")
+User.create(email: 'user@example.com', name: 'Michael Harris', password: "1234567a")
 puts "1 standard user created!"
 
 
