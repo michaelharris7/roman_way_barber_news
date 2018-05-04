@@ -8,8 +8,8 @@ end
 puts "10 news articles created!"
 
 
-User.create!(user_id: 1, user_type: 'ADMIN', user_name: "Michael")
+CommentUser.create!(user_id: 1, user_type: 'ADMIN', user_name: "Michael")
 puts "1 admin user created!"
 
-User.create!(user_id: 1, user_type: 'USER', user_name: "Mike")
+CommentUser.create!(user_id: 1, user_type: 'USER', user_name: "Mike")
 puts "1 standard user created!"
