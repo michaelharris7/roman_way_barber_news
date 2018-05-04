@@ -1,8 +1,20 @@
 class CommentUsersController < ApplicationController
-  before_action :set_user, only: [:update, :destroy]
+  before_action :set_comment_user, only: [:show, :update, :destroy]
+
+  def index
+    @comment_users = CommentUser.all
+    render json: @comment_users
+  end
+
+  def show
+    @comment_users = CommentUser.includes(:comments).find(params[:id])
+    @comment = Comment.new
+
+    render json: @comment_users
+  end
 
   def create
-    @comment_user = comment_user.new(comment_user_params)
+    @comment_user = CommentUser.new(comment_user_params)
 
     if @comment_user.save
       render json: @comment_user, status: :created, location: @comment_user
@@ -25,11 +37,11 @@ class CommentUsersController < ApplicationController
 
   private
 
-  def set_user
+  def set_comment_user
     @comment_user = comment_user.find(params[:id])
   end
 
-  def user_params
+  def comment_user_params
     params.require(:comment_user).permit(:user_id, :user_type, :user_name)
   end
 end
