@@ -38,7 +38,7 @@ class CommentUsersController < ApplicationController
   private
 
   def set_comment_user
-    @comment_user = comment_user.find(params[:id])
+    @comment_user = CommentUser.find(params[:id])
   end
 
   def comment_user_params
