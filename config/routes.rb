@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :features
+  resources :featured_articles
   resources :comments
   resources :comment_users
   resources :articles
