@@ -1,11 +1,8 @@
 require 'rails_helper'
 
 describe 'navigate' do
-  before(:each) do
-    @article_data = create(:article)
-  end
   let(:featured_article) do
-    create(:featured_article, article:@article_data)
+    create(:featured_article)
   end
 
   describe 'index' do
@@ -27,7 +24,7 @@ describe 'navigate' do
 
   describe 'delete' do
     it 'can be deleted' do
-      featured_article_to_delete = create(:featured_article, article:@article_data)
+      featured_article_to_delete = create(:featured_article)
 
       visit featured_articles_path(featured_article_to_delete)
 

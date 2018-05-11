@@ -1,12 +1,8 @@
 require 'rails_helper'
 
 describe 'navigate' do
-  before(:each) do
-    @comment_user_data = create(:comment_user)
-    @article_data = create(:article)
-  end
   let(:comment) do
-    create(:comment, comment_user:@comment_user_data, article:@article_data)
+    create(:comment)
   end
 
   describe 'index' do
@@ -28,7 +24,7 @@ describe 'navigate' do
 
   describe 'delete' do
     it 'can be deleted' do
-      comment_to_delete = create(:comment, comment_user:@comment_user_data, article:@article_data)
+      comment_to_delete = create(:comment)
 
       visit comments_path(comment_to_delete)
 
