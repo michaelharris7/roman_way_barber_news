@@ -8,7 +8,7 @@
 
 Rails.application.config.middleware.use Rack::Cors do
   allow do
-    origins '*'
+    origins 'romanway-barber-frontend.herokuapp.com'
 
     resource '*',
     :headers => :any,

@@ -28,3 +28,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise_token_auth', '~> 0.1.43'
 gem 'omniauth', '~> 1.8', '>= 1.8.1'
+
+ruby "2.4.1"
