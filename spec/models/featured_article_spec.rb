@@ -1,5 +1,14 @@
 require 'rails_helper'
 
 RSpec.describe FeaturedArticle, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe "Creation" do
+    before do
+      @article_data = create(:article)
+      @featured_article = create(:featured_article, article:@article_data)
+    end
+
+    it 'can be created' do
+      expect(@featured_article).to be_valid
+    end
+  end
 end

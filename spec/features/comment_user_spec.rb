@@ -1,13 +1,13 @@
 require 'rails_helper'
 
 describe 'navigate' do
-  let(:article) do
-    create(:article)
+  let(:comment_user) do
+    create(:comment_user)
   end
 
   describe 'index' do
     before do
-      visit articles_path
+      visit comment_users_path
     end
 
     it 'can be reached successfully' do
@@ -17,19 +17,18 @@ describe 'navigate' do
 
   describe 'show' do
     it 'can be reached successfully' do
-      visit article_path(article)
+      visit comment_user_path(comment_user)
       expect(page.status_code).to eq(200)
     end
   end
 
   describe 'delete' do
     it 'can be deleted' do
-      article_to_delete = create(:article)
+      comment_user_to_delete = create(:comment_user)
 
-      visit articles_path(article_to_delete)
+      visit comment_users_path(comment_user_to_delete)
 
-      expect{article_to_delete.destroy}.to change(Article, :count).by(-1)
+      expect{comment_user_to_delete.destroy}.to change(CommentUser, :count).by(-1)
     end
   end
-
 end

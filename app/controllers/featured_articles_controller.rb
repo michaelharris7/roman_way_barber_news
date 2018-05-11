@@ -1,9 +1,15 @@
 class FeaturedArticlesController < ApplicationController
-  before_action :set_featured_article, only: [:update, :destroy]
+  before_action :set_featured_article, only: [:show, :update, :destroy]
 
   def index
     @featured_articles = FeaturedArticle.all
     render json: @featured_articles
+  end
+
+  def show
+    @featured_article = FeaturedArticle.find(params[:id])
+
+    render json: @featured_article
   end
 
   def create

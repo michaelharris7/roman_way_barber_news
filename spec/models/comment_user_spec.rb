@@ -1,5 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe CommentUser, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe "Creation" do
+    before do
+      @comment_user = create(:comment_user)
+    end
+
+    it 'can be created' do
+      expect(@comment_user).to be_valid
+    end
+  end
 end
